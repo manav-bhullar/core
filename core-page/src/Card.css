@@ -1,0 +1,153 @@
+:root {
+    --background-dark: #2d3548;
+    --text-light: rgba(255, 255, 255, 0.6);
+    --text-lighter: rgba(255, 255, 255, 0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+}
+
+.card {
+    width: 300px;
+    height: 400px; /* Set a consistent height for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 16px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    position: relative; /* Required for absolute positioning of child elements */
+}
+
+.card_background {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    transform-origin: center;
+    transform: scale(1);
+    transition: filter 200ms linear, transform 200ms linear;
+}
+
+
+.card__image:hover {
+    filter: brightness(0.9) saturate(1.5) contrast(1);
+    transform: scale(1.05); /* Add a subtle hover zoom effect */
+}
+
+.card__content {
+    position: absolute;
+    bottom: 20px; /* Place content at the bottom of the card */
+    left: var(--spacing-l);
+    right: var(--spacing-l);
+    padding: var(--spacing-m);
+     /* Optional: Add a background for better readability */
+    border-radius: 8px;
+    text-align: left;
+
+    p, h3{
+        display: none;
+    }
+}
+
+
+.card_background:hover .card__content {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px ;
+    padding: var(--spacing-l);
+    transition: background 200ms linear;
+
+    p, h3{
+        display: block;
+    }
+}
+
+.card__category {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+}
+
+.card__heading {
+    color: var(--text-lighter);
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+}
+
+.big-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background-dark);
+    color: var(--text-lighter);
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Limit width on larger screens */
+    padding: var(--spacing-l);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 10; /* Ensures it appears above other elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .big-card-pic img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: var(--spacing-m);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about h1 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-s);
+    color: var(--text-lighter);
+    text-align: center;
+  }
+  
+  .information p {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-l);
+    color: var(--text-light);
+    text-align: center;
+  }
+  
+  .close-button {
+    margin-top: var(--spacing-m);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .close-button button {
+    padding: var(--spacing-s) var(--spacing-m);
+    font-size: 1rem;
+    color: var(--background-dark);
+    background: var(--text-lighter);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .close-button button:hover {
+    background: var(--text-light);
+    color: var(--background-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
