@@ -18,6 +18,18 @@ export default function CardsGrid({ isViewCardVisible, SetIsViewCardVisible }) {
         isViewCardVisible={isViewCardVisible} 
         SetIsViewCardVisible={SetIsViewCardVisible} 
       />
+      <Card 
+        isViewCardVisible={isViewCardVisible} 
+        SetIsViewCardVisible={SetIsViewCardVisible} 
+      />
+      <Card 
+        isViewCardVisible={isViewCardVisible} 
+        SetIsViewCardVisible={SetIsViewCardVisible} 
+      />
+      <Card 
+        isViewCardVisible={isViewCardVisible} 
+        SetIsViewCardVisible={SetIsViewCardVisible} 
+      />
     </div>
   );
 }
