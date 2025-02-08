@@ -1,14 +1,17 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
-
+import React, { useState } from "react";
 import "./Card.css";
 
-function ViewCard({ SetIsViewCardVisible }) {
+export function ViewCard({ SetIsViewCardVisible }) {
   return (
     <div className="big-card">
+
       <div className="big-card-pic">
-      <img src="https://cdn.sanity.io/images/s695h8ei/production/8e4eb588d5d9d11477b88ec6bd1f2a2d3a220cd6-394x600.jpg?auto=format&fit=max&q=80&w=192" alt="Designer" />
+        <img
+          src="https://cdn.sanity.io/images/s695h8ei/production/8e4eb588d5d9d11477b88ec6bd1f2a2d3a220cd6-394x600.jpg?auto=format&fit=max&q=80&w=192"
+          alt="Designer"
+        />
       </div>
 
       <div className="about">
@@ -19,20 +22,17 @@ function ViewCard({ SetIsViewCardVisible }) {
         <p>About</p>
       </div>
       <div className="close-button">
-        <button onClick={ () => SetIsViewCardVisible(false)}> close</button>
+        <button onClick={() => SetIsViewCardVisible(null)}>Close</button>
       </div>
     </div>
-  )
+  );
 }
-export default function Card({ isViewCardVisible, SetIsViewCardVisible }) {
 
-  
-
+export default function Card({ id, isViewCardVisible, SetIsViewCardVisible }) {
   return (
     <div className="full-card">
-      {isViewCardVisible && <ViewCard SetIsViewCardVisible={SetIsViewCardVisible} />
-    }
-      <div className="card" onClick={ () => SetIsViewCardVisible(true)} >
+      {isViewCardVisible === id && <ViewCard SetIsViewCardVisible={SetIsViewCardVisible} />}
+      <div className="card" onClick={() => SetIsViewCardVisible(id)}>
         <div className="card_background">
           <img
             src="https://cdn.sanity.io/images/s695h8ei/production/8e4eb588d5d9d11477b88ec6bd1f2a2d3a220cd6-394x600.jpg?auto=format&fit=max&q=80&w=192"
@@ -48,4 +48,5 @@ export default function Card({ isViewCardVisible, SetIsViewCardVisible }) {
     </div>
   );
 }
+
 

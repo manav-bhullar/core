@@ -1,7 +1,14 @@
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Exactly 4 cards per row */
-  gap: 0.75rem; /* Balanced spacing between cards */
-  margin: 1.5rem auto; /* Center grid container with reasonable margins */
-  max-width: 1300px; /* Prevent excessive stretching on large screens */
+  grid-template-columns: repeat(4, .7fr); 
+  gap: 10px !important; 
+  margin: 1.5rem auto; 
+  max-width: 1300px; 
+  padding: .6rem; 
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 8rem;
 }
+
+
+
