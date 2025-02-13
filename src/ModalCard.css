@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'VarelaRound-Regular';
-    src: url('/Users/manav/Library/CloudStorage/OneDrive-thapar.edu/Codes/Virsa/core/core-page/fonts/VarelaRound-Regular.ttf') format('truetype');
+    src: url('/Users/manav/Library/CloudStorage/OneDrive-thapar.edu/Codes/Virsa/core/fonts/VarelaRound-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'aktiv-grotesk';
-    src: url('/Users/manav/Library/CloudStorage/OneDrive-thapar.edu/Codes/Virsa/core/core-page/fonts/TTF/AktivGrotesk-Light.ttf') format('truetype');
+    src: url('/Users/manav/Library/CloudStorage/OneDrive-thapar.edu/Codes/Virsa/core/fonts/TTF/AktivGrotesk-Light.ttf') format('truetype');
 }
 
 @keyframes smoothSlideUp {
     from {
-      transform: translate(-50%, 100%);
+      transform: translate(-50%, 50%);
       opacity: 0.3;
     }
     to {
@@ -60,7 +60,7 @@
     /* X-offset, Y-offset, blur
     /* Assuming bg-dust is a custom color */
     border-radius: 10px;
-    animation: smoothSlideUp 0.6s cubic-bezier(0.25, 1, 0.3, 1) forwards;
+    animation: smoothSlideUp 0.99s cubic-bezier(0.25, 1, 0.3, 1) forwards;
     
 
     .modal-content {
@@ -131,7 +131,7 @@
     }
 
     .close-button {
-        position:absolute  ;
+        position:fixed  ;
         opacity: 0;
         top: -50%;
         right: -40%;
