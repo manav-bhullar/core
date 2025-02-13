@@ -22,7 +22,7 @@ export default function CardsGrid() {
   return (
     <div className="cards-grid">
       {cardsData.map((card) => (
-        <Card key={card.id} id={card.id} onClick={handleCardClick} />
+        <Card key={card.id} id={card.id} onCardClick={handleCardClick} />
       ))}
 
       {isModalOpen && <ModalCard closeModal={closeModal} />}

@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import "./Card.css";
 
-export default function Card({ onClick }) {
+export default function Card({ onCardClick }) {
   return (
-    <div className="full-card" onClick={onClick}>
+    <div className="full-card" onClick={onCardClick}>
       <div className="card">
         <div className="card_background">
           <img

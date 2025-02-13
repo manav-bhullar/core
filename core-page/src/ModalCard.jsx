@@ -9,7 +9,7 @@ export default function ModalCard({ closeModal }) {
 
 
       <div className="modal-card">
-        <div className="modal-content">
+        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="modal-image">
             <img
               src="https://cdn.sanity.io/images/s695h8ei/production/8e4eb588d5d9d11477b88ec6bd1f2a2d3a220cd6-394x600.jpg?auto=format&fit=max&q=80&w=192"
